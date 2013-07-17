@@ -5,6 +5,12 @@
     </head>
     <body>
       <div style="width:100%; height:100%" id="map"></div>
-      <div> TESTE!! </div>
+      <script defer="defer" type="text/javascript">
+        var map = new OpenLayers.Map('map');
+        var wms = new OpenLayers.Layer.WMS( "OpenLayers WMS",
+            "http://vmap0.tiles.osgeo.org/wms/vmap0", {layers: 'basic'} );
+        map.addLayer(wms);
+        map.zoomToMaxExtent();
+      </script>
     </body>
 </html>

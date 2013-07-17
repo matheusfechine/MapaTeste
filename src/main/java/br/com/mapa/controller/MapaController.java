@@ -11,7 +11,6 @@ public class MapaController {
 	@Get
 	@Path("/")
 	public void paginaDoMapa() {
-		
 	}
 
 }
