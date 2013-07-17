@@ -1,4 +1,4 @@
 MapaTeste
 =========
 
-Projeto de estudo ao OpenLayer
+Projeto de estudo do OpenLayer
