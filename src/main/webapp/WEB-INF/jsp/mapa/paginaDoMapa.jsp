@@ -1,16 +1,13 @@
+<%@include file="../imports/jstl.jsp" %>
+<%@include file="/javascript/javascript.jsp" %>
 <html>
 <head>
-  <title>OpenLayers Example</title>
-    <script src="http://openlayers.org/api/OpenLayers.js"></script>
-    </head>
-    <body>
-      <div style="width:100%; height:100%" id="map"></div>
-      <script defer="defer" type="text/javascript">
-        var map = new OpenLayers.Map('map');
-        var wms = new OpenLayers.Layer.WMS( "OpenLayers WMS",
-            "http://vmap0.tiles.osgeo.org/wms/vmap0", {layers: 'basic'} );
-        map.addLayer(wms);
-        map.zoomToMaxExtent();
-      </script>
-    </body>
+<title>OpenLayers Example</title>
+<script src="http://openlayers.org/api/OpenLayers.js"></script>
+</head>
+<body>
+	<div style="width: 100%; height: 100%" id="map"></div>
+	<script defer="defer" type="text/javascript" src='<c:url value="/javascript/mapa.js"></c:url>'>
+	</script>
+</body>
 </html>
