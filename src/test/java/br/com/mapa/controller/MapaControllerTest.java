@@ -19,4 +19,12 @@ public class MapaControllerTest {
 		controller.paginaDoMapa();
 	}
 	
+	@Test
+	public void deveSerPossivelAbrirPaginaDeKnockout(){
+		controller.paginaDeKnockout();
+	}
+	@Test
+	public void deveSerPossivelAbrirPaginaDeKnockoutDois(){
+		controller.paginaDeKnockoutDois();
+	}
 }

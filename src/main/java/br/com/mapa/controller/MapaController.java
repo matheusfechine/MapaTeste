@@ -13,4 +13,14 @@ public class MapaController {
 	public void paginaDoMapa() {
 	}
 
+	@Get
+	@Path("/knockout")
+	public void paginaDeKnockout() {
+	}
+
+	@Get
+	@Path("/knockout2")
+	public void paginaDeKnockoutDois() {
+	}
+
 }
