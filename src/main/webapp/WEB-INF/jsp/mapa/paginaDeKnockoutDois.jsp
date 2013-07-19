@@ -32,7 +32,9 @@
 	<h3 data-bind="visible: totalSurcharge() > 0">
    	 	Total surcharge: $<span data-bind="text: totalSurcharge().toFixed(2)"></span>
 	</h3>
-	<button data-bind="click: addSeat">Reserve another seat</button>
+	<h2>Your seat reservations (<span data-bind="text: seats().length"></span>)</h2>
+	
+	<button data-bind="click: addSeat, enable: seats().length < 5">Reserve another seat</button>
 	<script defer="defer" type="text/javascript"
 		src='<c:url value="/javascript/paginaDeKnockoutDois.js"></c:url>'>
 		
