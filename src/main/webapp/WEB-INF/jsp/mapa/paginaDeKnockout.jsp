@@ -15,7 +15,7 @@
 		Last name: <input data-bind="value: lastName" />
 	</p>
 	<p>
-		Full name: <strong data-bind="text: fullName"></strong>
+		Full name: <strong data-bind="text: fullName()"></strong>
 	</p>
 	<button data-bind="click: capitalizeLastName">Go caps</button>
 

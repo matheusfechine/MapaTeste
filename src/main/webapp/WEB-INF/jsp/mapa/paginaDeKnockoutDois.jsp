@@ -8,6 +8,9 @@
 	src='<c:url value="/javascript/knockout/knockout-2.3.0.js"></c:url>'></script>
 </head>
 <body>
+<c:forEach items="lista" var="list">
+	${list}
+</c:forEach>
 	<table>
 		<thead>
 			<tr>
@@ -20,12 +23,16 @@
 		<tbody data-bind="foreach: seats">
 			<tr>
 				<td data-bind="text: name"></td>
-				<td data-bind="text: meal().mealName"></td>
-				<td data-bind="text: meal().price"></td>
+				<td><select data-bind="options: $root.availableMeals, value: meal, optionsText: 'nome'"></select></td>
+				<td data-bind="text: formattedPrice"></td>
+				<td><a href="#" data-bind="click: $root.removeSeat">Remove</a></td>
 			</tr>
 		</tbody>
 	</table>
-
+	<h3 data-bind="visible: totalSurcharge() > 0">
+   	 	Total surcharge: $<span data-bind="text: totalSurcharge().toFixed(2)"></span>
+	</h3>
+	<button data-bind="click: addSeat">Reserve another seat</button>
 	<script defer="defer" type="text/javascript"
 		src='<c:url value="/javascript/paginaDeKnockoutDois.js"></c:url>'>
 		
