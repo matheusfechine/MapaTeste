@@ -19,10 +19,9 @@ function ReservationsViewModel() {
     		  type: "GET",
     		  success : function(retorno) {
     			self.availableMeals = retorno.lista;
-    		    $(retorno.lista).each(function( index ) {
-    		    	self.seats.push(new SeatReservation(retorno.lista[index].nome, self.availableMeals[index]));
-    			});
-    			self.seats.push();
+	    		    $(retorno.lista).each(function( index ) {
+	    		    	self.seats.push(new SeatReservation(retorno.lista[index].nome, self.availableMeals[index]));
+	    			});
     			}
     		});
 
